@@ -247,7 +247,7 @@ describe('Recipes', function() {
       // and returns updated item
       .then(function(res) {
         expect(res).to.have.status(204);
-        expect(res).to.be.json;
+        expect(res.body).to.be.json;
         expect(res.body).to.be.a('object');
         expect(res.body).to.deep.equal(updateData);
       });
